@@ -1,0 +1,13 @@
+# IDE junk
+/.project
+/.settings/
+/.classpath
+
+# Maven
+/log/
+/target/
+
+#BusinessWorks Workspace
+/.bsProject/
+/.com.tibco.bw.rad/
+/.metadata/

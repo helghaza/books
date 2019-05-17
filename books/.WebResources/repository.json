@@ -1,0 +1,17 @@
+{
+    "records": [],
+    "resources": [
+        {
+            "location": "Service Descriptors/books.Process-books.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/books.Book-books.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/books.books-books.json",
+            "type": "generated"
+        }
+    ]
+}

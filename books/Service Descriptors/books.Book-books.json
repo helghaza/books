@@ -1,0 +1,121 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/books" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-books",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Book"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Book to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Book"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "get-books",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a Books to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Books"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "delete-books",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "isbn",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Book" : {
+      "type" : "object",
+      "properties" : {
+        "isbn" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "authorName" : {
+          "type" : "string"
+        },
+        "releaseDate" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "vintage" : {
+          "type" : "boolean"
+        },
+        "signed" : {
+          "type" : "boolean"
+        },
+        "price" : {
+          "type" : "number"
+        }
+      }
+    },
+    "Books" : {
+      "type" : "object",
+      "properties" : {
+        "Book" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Book",
+            "uniqueItems" : false
+          }
+        }
+      }
+    }
+  }
+}

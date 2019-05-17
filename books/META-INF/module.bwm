@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_yQ2tsHijEemFrZu0KsSGCQ" targetNamespace="http://tns.tibco.com/bw/composite/books" name="books" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_ws9_dHirEemFrZu0KsSGCQ" name="books" promote="Componentbooks/books">
+    <sca:interface.wsdl xmi:id="_ws9_eHirEemFrZu0KsSGCQ" interface="http://xmlns.example.com/20190517155751PLT#wsdl.interface(books)" scaext:wsdlLocation="../Processes/books/books.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ws9_eXirEemFrZu0KsSGCQ" name="RestService" path="/books" docBasePath="http://localhost:7777/books" docResourcePath="books" basePath="/" connector="books.books" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/books.books-books.json">
+      <operation xmi:id="_wtHwcHirEemFrZu0KsSGCQ" operationName="post" nickname="post-books" httpMethod="POST" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_wtHwcXirEemFrZu0KsSGCQ" operationName="get" nickname="get-books" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_wtHwcnirEemFrZu0KsSGCQ" operationName="delete" nickname="delete-books" httpMethod="DELETE" responseStyle="element">
+        <parameters xmi:id="_0xwGsHivEemFrZu0KsSGCQ"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_wtHwdHirEemFrZu0KsSGCQ"/>
+      <advancedConfig xmi:id="_ws9_enirEemFrZu0KsSGCQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_wtHwc3irEemFrZu0KsSGCQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_ycVk8HijEemFrZu0KsSGCQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_yceu4HijEemFrZu0KsSGCQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_yceu4XijEemFrZu0KsSGCQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_yceu4nijEemFrZu0KsSGCQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ycof4HijEemFrZu0KsSGCQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_yctYYHijEemFrZu0KsSGCQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ycv0oHijEemFrZu0KsSGCQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ycyQ4HijEemFrZu0KsSGCQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ycyQ4XijEemFrZu0KsSGCQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eDWdIHikEemFrZu0KsSGCQ" name="JdbcUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gYfvkHikEemFrZu0KsSGCQ" name="JdbcDriver" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_hnDNYHikEemFrZu0KsSGCQ" name="JdbcUser" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_incTYHikEemFrZu0KsSGCQ" name="JdbcPassword" type="property:password" scaext:simpleValue="#!MnBqf7TEXYtOmwQvGA9mDw==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ptgXIHikEemFrZu0KsSGCQ" name="HttpPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_ws9_cHirEemFrZu0KsSGCQ" name="Componentbooks" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ws9_cXirEemFrZu0KsSGCQ" processName="books.books"/>
+    <sca:service xmi:id="_ws9_cnirEemFrZu0KsSGCQ" name="books">
+      <sca:interface.wsdl xmi:id="_ws9_c3irEemFrZu0KsSGCQ" interface="http://xmlns.example.com/20190517155751PLT#wsdl.interface(books)" scaext:wsdlLocation="../Processes/books/books.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
