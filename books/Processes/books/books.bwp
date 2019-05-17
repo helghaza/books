@@ -1254,7 +1254,21 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="576" width="860" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="653" width="859" xsi:type="notation:Bounds"/>
+        </children>
+        <children description="Manage Books operations"
+            fillColor="13369343" fontName="Segoe UI" lineColor="6737151"
+            lineWidth="1" transparency="0" type="Note" xsi:type="notation:Shape">
+            <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
+                <element xsi:nil="true"/>
+            </children>
+            <children type="Description" xsi:type="notation:BasicDecorationNode">
+                <element xsi:nil="true"/>
+            </children>
+            <styles xsi:type="notation:TextStyle"/>
+            <styles xsi:type="notation:LineTypeStyle"/>
+            <element xsi:nil="true"/>
+            <layoutConstraint x="429" xsi:type="notation:Bounds" y="-100"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1290,6 +1304,13 @@
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[25, 1, -195, 0]$[196, 0, -24, -1]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges lineColor="0" lineWidth="1" source="//@children.1"
+            target="//@children.0" type="NoteAttachment" xsi:type="notation:Connector">
+            <styles xsi:type="notation:ArrowStyle"/>
+            <styles xsi:type="notation:LineTypeStyle"/>
+            <element xsi:nil="true"/>
+            <bendpoints points="[0, 0, -429, -326]$[0, 0, -429, -326]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
