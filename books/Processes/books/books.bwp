@@ -1256,7 +1256,7 @@
             <element href="//0/@process"/>
             <layoutConstraint height="653" width="859" xsi:type="notation:Bounds"/>
         </children>
-        <children description="Manage Books operations"
+        <children description="Manage Books operations with REST API"
             fillColor="13369343" fontName="Segoe UI" lineColor="6737151"
             lineWidth="1" transparency="0" type="Note" xsi:type="notation:Shape">
             <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
