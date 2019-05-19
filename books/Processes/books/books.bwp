@@ -1463,25 +1463,17 @@
                                 tibex:xpdlId="4b874b41-d533-40c8-aab9-633dc7c9b048" variable="deleteOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://xmlns.example.com/20190517155751PLT&quot; xmlns:tns2=&quot;http://xmlns.example.com/books/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;delete.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;deleteOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;msg>&#xa;            &lt;xsl:value-of select=&quot;concat(&amp;quot;Book ISBN #&amp;quot;, $delete.parameters/tns2:isbn, &amp;quot;is deleted&amp;quot;)&quot;/>&#xa;        &lt;/msg>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://xmlns.example.com/20190517155751PLT&quot; xmlns:tns2=&quot;http://xmlns.example.com/books/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;delete.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;deleteOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;msg>&#xa;            &lt;xsl:value-of select=&quot;concat(&amp;quot;Book ISBN #&amp;quot;, $delete.parameters/tns2:id, &amp;quot;is deleted&amp;quot;)&quot;/>&#xa;        &lt;/msg>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns1="http://xmlns.example.com/20190517155751PLT" xmlns:tns2="http://xmlns.example.com/books/parameters" version="2.0"&gt;
-    &lt;xsl:template name="deleteOut-input" match="/"&gt;
-        &lt;tns1:deleteResponse&gt;
-            &lt;msg&gt;
-                &lt;xsl:value-of select="concat(&amp;quot;Book ISBN #&amp;quot;, $delete/parameters/tns2:booksDeleteParameters/tns2:isbn, &amp;quot;is deleted&amp;quot;)"/&gt;
-            &lt;/msg&gt;
-        &lt;/tns1:deleteResponse&gt;
-    &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns1="http://xmlns.example.com/20190517155751PLT" xmlns:tns2="http://xmlns.example.com/books/parameters" version="2.0"&gt;&lt;xsl:param name="delete"/&gt;&lt;xsl:template name="deleteOut-input" match="/"&gt;&lt;tns1:deleteResponse&gt;&lt;msg&gt;&lt;xsl:value-of select="concat(&amp;quot;Book ISBN #&amp;quot;, $delete/parameters/tns2:booksDeleteParameters/tns2:id, &amp;quot;is deleted&amp;quot;)"/&gt;&lt;/msg&gt;&lt;/tns1:deleteResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <bpws:targets>
                                     <bpws:target linkName="DeleteBookTodeleteOut"/>
                                 </bpws:targets>
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:extActivity
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Books&quot; xmlns:tns2=&quot;http://xmlns.example.com/books/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;DeleteBook-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:ISBN>&#xa;            &lt;xsl:value-of select=&quot;$delete/parameters/tns2:booksDeleteParameters/tns2:isbn&quot;/>&#xa;        &lt;/tns:ISBN>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Books&quot; xmlns:tns2=&quot;http://xmlns.example.com/books/parameters&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;delete&quot;/>&lt;xsl:template name=&quot;DeleteBook-input&quot; match=&quot;/&quot;>&lt;tns:ISBN>&lt;xsl:value-of select=&quot;$delete/parameters/tns2:booksDeleteParameters/tns2:id&quot;/>&lt;/tns:ISBN>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="DeleteBook-input"
                                     name="DeleteBook"
@@ -1492,7 +1484,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Books&quot; xmlns:tns2=&quot;http://xmlns.example.com/books/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;delete.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;DeleteBook-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:ISBN>&#xa;            &lt;xsl:value-of select=&quot;$delete.parameters/tns2:isbn&quot;/>&#xa;        &lt;/tns:ISBN>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Books&quot; xmlns:tns2=&quot;http://xmlns.example.com/books/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;delete.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;DeleteBook-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:ISBN>&#xa;            &lt;xsl:value-of select=&quot;$delete.parameters/tns2:id&quot;/>&#xa;        &lt;/tns:ISBN>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="books.DeleteBook" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>

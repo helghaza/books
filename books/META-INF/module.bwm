@@ -12,7 +12,9 @@
         <clientRequestFormat>json</clientRequestFormat>
       </operation>
       <operation xmi:id="_wtHwcnirEemFrZu0KsSGCQ" operationName="delete" nickname="delete-books" httpMethod="DELETE" responseStyle="element">
-        <parameters xmi:id="_0xwGsHivEemFrZu0KsSGCQ"/>
+        <parameters xmi:id="_0xwGsHivEemFrZu0KsSGCQ">
+          <parameterMapping xmi:id="_vHD5AHpVEemFrZu0KsSGCQ" parameterName="id" parameterType="Query" dataType="string"/>
+        </parameters>
         <clientFormat>json</clientFormat>
         <clientRequestFormat>json</clientRequestFormat>
       </operation>
