@@ -91,27 +91,27 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//books//JdbcPassword</name>
-			<value>#!GRixp/cJn6Ua7FivItt+0hc8IV5Mc43t</value>
+			<value>#!rKZEA9kxWsH19+g4/WQJnjLACsJ+K/wX7t0zKSUS+pA=</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Password</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 		</globalVariable>
 		<globalVariable>
 			<name>//books//JdbcUser</name>
-			<value>bwuser</value>
+			<value>tibco</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 		</globalVariable>
 		<globalVariable>
 			<name>//books//HttpPort</name>
-			<value>8123</value>
+			<value>8122</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 		</globalVariable>
 	</globalVariables>
 </repository>
