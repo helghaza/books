@@ -27,7 +27,7 @@
     <appNode>books-AppNode</appNode>
     <osgiPort></osgiPort>
     <appSpaceDesc></appSpaceDesc>
-    <redeploy>false</redeploy>
+    <redeploy>true</redeploy>
     <tibco.Home></tibco.Home>
     <externalProfile>false</externalProfile>
     <keystorePassword></keystorePassword>
